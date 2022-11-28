@@ -21,9 +21,8 @@ const DiscoverPage = () => {
         '%2C'
       )}&with_watch_monetization_types=flatrate`
     );
-    setSortByDrop(false);
     setFiltreOn(false);
-    // setGenders([]);
+    setGenders([]);
   };
 
   React.useEffect(() => {
