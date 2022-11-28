@@ -7,23 +7,24 @@ import useFetch from '../custom-hooks/useFetch';
 import styles from '../pages/MoviePage.module.css';
 
 const DiscoverPage = () => {
-  const [sortBy, setSortBy] = React.useState('popularity.dasc');
+  const [sortBy, setSortBy] = React.useState('popularity.desc');
   const { request, dataFetch, loading } = useFetch();
   let [sortByDrop, setSortByDrop] = React.useState(false);
   let [filtreOn, setFiltreOn] = React.useState(false);
   const [genders, setGenders] = React.useState([]);
-  let [page, setPage] = React.useState(1);
+  let [page, setPage] = React.useState(2);
 
   const handleSubmit = e => {
     e.preventDefault();
     request(
-      `https://api.themoviedb.org/3/discover/movie?api_key=5d3e8ff8d86a6cb2f81e46aa38bfdfea&language=pt-BR&sort_by=${sortBy}&include_adult=false&include_video=false&page=1&with_genres=${
-        genders.join('%2C') || ''
-      }&with_watch_monetization_types=flatrate`
+      `https://api.themoviedb.org/3/discover/movie?api_key=5d3e8ff8d86a6cb2f81e46aa38bfdfea&language=pt-BR&sort_by=${sortBy}&include_adult=false&include_video=false&page=1&with_genres=${genders.join(
+        '%2C'
+      )}&with_watch_monetization_types=flatrate`
     );
+    console.log(dataFetch);
     setSortByDrop(false);
     setFiltreOn(false);
-    setGenders([]);
+    // setGenders([]);
   };
 
   React.useEffect(() => {
@@ -31,7 +32,7 @@ const DiscoverPage = () => {
       `https://api.themoviedb.org/3/discover/movie?api_key=5d3e8ff8d86a6cb2f81e46aa38bfdfea&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate`
     );
   }, [page]);
-
+  console.log(page);
   const previousPage = () => {
     if (page > 1) setPage(--page);
     window.scrollTo(0, 0);
@@ -48,9 +49,9 @@ const DiscoverPage = () => {
         </h1>
         <form
           onSubmit={handleSubmit}
-          className='text-center w-56 flex flex-col m-auto gap-2 sm:w-2/4 sm:items-center border p-2'
+          className='text-center w-72 flex flex-col m-auto gap-2  lg:w-2/4 sm:items-center border p-2'
         >
-          <div className=' sm:w-3/4 md:w-2/4 xl:w-2/6 cursor-pointer'>
+          <div className='sm:w-72 md:w-4/4 xl:w-3/6 cursor-pointer'>
             <div
               className='hover:bg-sky-700 px-5 border p-1 bg-gray-800 text-white'
               onClick={() => setSortByDrop(!sortByDrop)}
@@ -62,7 +63,7 @@ const DiscoverPage = () => {
             ) : null}
           </div>
 
-          <div className='  sm:w-3/4 md:w-2/4 xl:w-2/6 cursor-pointer'>
+          <div className='sm:w-72 md:w-4/4 xl:w-3/6 cursor-pointer'>
             <div
               onClick={() => setFiltreOn(!filtreOn)}
               className=' hover:bg-sky-700 border py-1 bg-gray-800 text-white'
@@ -77,7 +78,7 @@ const DiscoverPage = () => {
             ) : null}
           </div>
 
-          <button className='hover:bg-sky-700 bg-gray-800  p-2 border text-white sm:w-3/4 md:w-2/4 xl:w-2/6'>
+          <button className='hover:bg-sky-700 sm:w-72 bg-gray-800  p-2 border text-white sm:w-80 md:w-4/4 xl:w-3/6'>
             Pesquisar
           </button>
         </form>

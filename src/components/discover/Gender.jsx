@@ -23,17 +23,17 @@ const genderArray = [
   { id: 37, name: 'Faroeste' },
 ];
 const Gender = ({ genders, setGenders }) => {
+  console.log(genders);
   const addAtive = e => {
     if (!genders.includes(e.target.value)) {
       setGenders([...genders, e.target.value]);
       e.target.classList.toggle('active_gender_search');
-
     } else {
       genders = genders.filter(item => item !== e.target.value);
       e.target.classList.toggle('active_gender_search');
     }
   };
-  console.log(genders)
+  console.log(genders);
   return (
     <div className='border'>
       Gênero:

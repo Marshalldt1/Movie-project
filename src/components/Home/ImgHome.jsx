@@ -21,14 +21,14 @@ const ImgHome = () => {
   return (
     <section
       style={{ backgroundImage: `url(${pulpFiction})` }}
-      className={`shadow-lg shadow-gray-500/40 p-6 md-p-20 ${styles.bg_img}`}
+      className={`shadow-md shadow-black p-6 md-p-20 ${styles.bg_img}`}
     >
       <p
-        className={`${styles.title}  text-gray-400 text-3xl  md:text-4xl font-bold`}
+        className={`${styles.title}  text-yellow-200 text-3xl  md:text-4xl font-bold`}
       >
         Bem vindo(a).
       </p>
-      <p className={`${styles.title} text-white text-sm md:text-xl`}>
+      <p className={`${styles.title} text-yellow-200 text-sm md:text-xl`}>
         {digitando}
       </p>
     </section>
