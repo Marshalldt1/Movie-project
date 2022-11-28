@@ -50,7 +50,7 @@ const MoviePageDetails = ({ dataFetch }) => {
                 <strong>{dataFetch.runtime}</strong> minutos.
               </p>
               <p className='text-sm sm:text-base text-gray-300 lg:text-lg'>
-                <strong>Custo:</strong> $ {dataFetch.budget} dólares.
+                <strong>Custo:</strong> {dataFetch.budget || 'Não informado a quantidade de '} dólares.
               </p>
               <p className='text-sm sm:text-base text-gray-300 lg:text-lg'>
                 <strong>Bilheteria:</strong> $
