@@ -1,7 +1,6 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/" },
-    { "source": "/explorar", "destination": "/explorar" },
-    { "source": "/search/search?*", "destination": "/search/search?*" }
+    { "source": "/explorar", "destination": "/explorar" }
   ]
 }
