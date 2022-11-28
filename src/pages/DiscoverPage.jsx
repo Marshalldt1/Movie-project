@@ -78,7 +78,7 @@ const DiscoverPage = () => {
             ) : null}
           </div>
 
-          <button className='hover:bg-sky-700 sm:w-72 bg-gray-800  p-2 border text-white sm:w-80 md:w-4/4 xl:w-3/6'>
+          <button className='hover:bg-sky-700 sm:w-72 bg-gray-800  p-2 border text-white  md:w-4/4 xl:w-3/6'>
             Pesquisar
           </button>
         </form>

@@ -18,6 +18,7 @@ const SearchPage = () => {
     request(
       `https://api.themoviedb.org/3/search/movie?api_key=5d3e8ff8d86a6cb2f81e46aa38bfdfea&language=pt-BR&query=${searchString}&page=${page}&include_adult=false`
     );
+    window.scrollTo(0, 0);
   }, [searchString, page]);
 
   console.log(dataFetch);
