@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './MoviePageDetails.module.css';
 // import semImagem from '../../assets/sem-imagem.jpg';
 const MoviePageDetails = ({ dataFetch }) => {
-
+  window.scrollTo(0, 0);
   if (dataFetch) {
     return (
       <div
