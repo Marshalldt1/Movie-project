@@ -21,7 +21,6 @@ const DiscoverPage = () => {
         '%2C'
       )}&with_watch_monetization_types=flatrate`
     );
-    console.log(dataFetch);
     setSortByDrop(false);
     setFiltreOn(false);
     // setGenders([]);
@@ -32,7 +31,6 @@ const DiscoverPage = () => {
       `https://api.themoviedb.org/3/discover/movie?api_key=5d3e8ff8d86a6cb2f81e46aa38bfdfea&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate`
     );
   }, [page]);
-  console.log(page);
   const previousPage = () => {
     if (page > 1) setPage(--page);
     window.scrollTo(0, 0);

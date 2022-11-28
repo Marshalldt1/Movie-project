@@ -11,6 +11,7 @@ const FormSearch = () => {
 
     if (!search) return;
     navigate(`search/search?q=${search}`);
+    setSearch('');
   };
   return (
     <form onSubmit={handleSubmit} className='flex gap-3'>

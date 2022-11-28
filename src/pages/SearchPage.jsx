@@ -21,7 +21,6 @@ const SearchPage = () => {
     window.scrollTo(0, 0);
   }, [searchString, page]);
 
-  console.log(dataFetch);
   const previousPage = () => {
     if (page > 1) setPage(--page);
   };

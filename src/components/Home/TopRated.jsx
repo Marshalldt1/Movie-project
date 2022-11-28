@@ -12,7 +12,6 @@ const TopRated = () => {
   }, []);
   if (dataFetch) {
     const { results } = dataFetch;
-    console.log(results);
     return (
       <div className='my-5 bg-gray-100'>
         <Title title='melhores avaliações' />

@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './MoviePageDetails.module.css';
 // import semImagem from '../../assets/sem-imagem.jpg';
 const MoviePageDetails = ({ dataFetch }) => {
-  console.log(dataFetch);
 
   if (dataFetch) {
     return (

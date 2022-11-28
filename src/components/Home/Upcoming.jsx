@@ -10,7 +10,6 @@ const Upcoming = () => {
       'https://api.themoviedb.org/3/movie/now_playing?api_key=5d3e8ff8d86a6cb2f81e46aa38bfdfea&language=pt-BR&page=1&region=BR'
     );
   }, []);
-  console.log(dataFetch)
   if (dataFetch) {
     const { results } = dataFetch;
     return (
