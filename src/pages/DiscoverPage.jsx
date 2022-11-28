@@ -12,7 +12,7 @@ const DiscoverPage = () => {
   let [sortByDrop, setSortByDrop] = React.useState(false);
   let [filtreOn, setFiltreOn] = React.useState(false);
   const [genders, setGenders] = React.useState([]);
-  let [page, setPage] = React.useState(2);
+  let [page, setPage] = React.useState(1);
 
   const handleSubmit = e => {
     e.preventDefault();
