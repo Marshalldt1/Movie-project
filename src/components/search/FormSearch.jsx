@@ -14,7 +14,7 @@ const FormSearch = () => {
     setSearch('');
   };
   return (
-    <form onSubmit={handleSubmit} className='flex gap-3'>
+    <form onSubmit={handleSubmit} className='flex gap-1'>
       <input
         className='p-2 w-72 rounded-md border-none  placeholder:italic placeholder:text-slate-400'
         type='search'

@@ -64,7 +64,7 @@ const DiscoverPage = () => {
         >
           <div className='sm:w-72 md:w-4/4 xl:w-3/6 cursor-pointer'>
             <div
-              className='hover:bg-sky-700 px-5 border p-1 bg-gray-800 text-white'
+              className='hover:bg-black px-5 border p-1 bg-gray-800 text-white'
               onClick={() => setSortByDrop(!sortByDrop)}
             >
               Ordenar {sortByDrop ? <span>▼</span> : <span>▶</span>}
@@ -77,7 +77,7 @@ const DiscoverPage = () => {
           <div className='sm:w-72 md:w-4/4 xl:w-3/6 cursor-pointer'>
             <div
               onClick={handleFiltreOn}
-              className=' hover:bg-sky-700 border py-1 bg-gray-800 text-white'
+              className=' hover:bg-black border py-1 bg-gray-800 text-white'
             >
               Filtrar
               {filtreOn ? <span>▼</span> : <span>▶</span>}
@@ -95,7 +95,7 @@ const DiscoverPage = () => {
             ) : null}
           </div>
 
-          <button className='hover:bg-sky-700 sm:w-72 bg-gray-800  p-2 border text-white  md:w-4/4 xl:w-3/6'>
+          <button className='hover:bg-black sm:w-72 bg-gray-800  p-2 border text-white  md:w-4/4 xl:w-3/6'>
             Pesquisar
           </button>
         </form>
