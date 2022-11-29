@@ -9,8 +9,6 @@ const sortByArray = [
   ['Bilheteria (maior)', 'revenue.desc'],
   ['Título (a-z)', 'original_title.asc'],
   ['Título (z-a)', 'original_title.desc'],
-  ['Avaliação (menor)', 'vote_average.asc'],
-  ['Avaliação(Maior)', 'vote_average.desc'],
 ];
 
 const SortBy = ({ setSortBy, sortBy }) => {

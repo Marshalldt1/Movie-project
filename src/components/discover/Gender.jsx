@@ -22,16 +22,24 @@ const genderArray = [
   { id: 10752, name: 'Guerra' },
   { id: 37, name: 'Faroeste' },
 ];
-const Gender = ({ genders, setGenders }) => {
+const Gender = ({ genders, setGenders, check, setCheck }) => {
   const addAtive = e => {
+    if (check) {
+      genders = genders.filter(item => item === e.target.value);
+      setGenders([genders]);
+    }
     if (!genders.includes(e.target.value)) {
       setGenders([...genders, e.target.value]);
-      e.target.classList.toggle('active_gender_search');
+      e.target.classList.add('active_gender_search');
     } else {
+      console.log('oi');
       genders = genders.filter(item => item !== e.target.value);
-      e.target.classList.toggle('active_gender_search');
+      setGenders(genders);
+      e.target.classList.remove('active_gender_search');
     }
+    setCheck(false);
   };
+
   return (
     <div className='border'>
       Gênero:
