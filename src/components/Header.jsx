@@ -11,19 +11,19 @@ const Header = () => {
         <div className='flex sm:flex-row items-center justify-around sm:gap-5 betw '>
           <div className='flex gap-5'>
             <Link to='/'>
-              <h1 className='border  sm:text-1xl hover:bg-gray-400 hover:text-black p-3 text-white'>
+              <h1 className='border font-bold  sm:text-1xl hover:bg-white hover:text-black p-3 text-white'>
                 Home
               </h1>
             </Link>
             <Link to='explorar'>
-              <p className='sm:text-1xl border text-white hover:bg-gray-400 hover:text-black p-3'>
+              <p className='sm:text-1xl font-bold border text-white hover:bg-white hover:text-black p-3'>
                 Explorar
               </p>
             </Link>
           </div>
           <button
             onClick={() => setSearch(!search)}
-            className=' text-1xl border text-white hover:bg-gray-400 hover:text-black p-3'
+            className=' text-1xl border font-bold text-white hover:bg-white hover:text-black p-3'
           >
             Pesquisar
           </button>
