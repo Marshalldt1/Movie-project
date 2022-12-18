@@ -4,20 +4,6 @@ import styles from '../Home/ImgHome.module.css';
 import pulpFiction from './../assets/pulpFiction.jpg';
 
 const ImgHome = () => {
-  const [digitando, setDigitando] = React.useState('');
-  let [index, setIndex] = React.useState(-1);
-  const frase = 'Pesquise filmes, novidades e divirta-se!';
-  const array = frase.split('');
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (digitando.length < array.length) {
-        setDigitando([...digitando, array[index]]);
-        setIndex(++index);
-      }
-    }, 100);
-  }, [index]);
-
   return (
     <section
       style={{ backgroundImage: `url(${pulpFiction})` }}
@@ -29,7 +15,7 @@ const ImgHome = () => {
         Bem vindo(a).
       </p>
       <p className={`${styles.title} text-yellow-200 text-sm md:text-xl`}>
-        {digitando}
+        Pesquise filmes, novidades e divirta-se!
       </p>
     </section>
   );

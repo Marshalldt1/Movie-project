@@ -14,7 +14,6 @@ const MoviePage = () => {
         `https://api.themoviedb.org/3/movie/${id}?api_key=5d3e8ff8d86a6cb2f81e46aa38bfdfea&language=pt-BR`
       );
     }, []);
-  console.log(dataFetch);
   if (dataFetch)
     return (
       <section
